@@ -284,7 +284,7 @@ async function prepareForSale(wallet, amount, tiers) {
       console.error(chalk.red(`[${wallet.address}] Не удалось купить тир ${tier.id} :(`));
       console.error(chalk.bgRed(e.message));
       if (e.errors) {
-        console.error(chalk.bgRed(e.errors));
+        console.error(chalk.bgRed(e.errors[0]));
       }
       console.log();
     }
